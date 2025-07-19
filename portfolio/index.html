@@ -595,25 +595,27 @@
       })();
     </script>
 
-    <!-- Título da aba e título do Google -->
-    <title>Antoni Matheus | Designer Gráfico e Desenvolvedor de Sites</title>
+    <!-- Título da aba e SEO -->
+    <title>
+      Antoni Matheus | Designer Gráfico e Desenvolvedor Web Criativo
+    </title>
 
-    <!-- Meta descrição: aparece no Google -->
+    <!-- Meta description: até 160 caracteres bem chamativos e com CTA implícito -->
     <meta
       name="description"
-      content="Portfólio criativo de Antoni Matheus, designer e desenvolvedor de sites. Crio soluções visuais e digitais com foco em conversão e identidade forte. Veja meus projetos!"
+      content="Descubra o portfólio de Antoni Matheus, designer gráfico e desenvolvedor web. Sites modernos, identidades visuais impactantes e foco em conversão."
     />
 
-    <!-- Meta keywords (não tem tanto peso hoje, mas pode ajudar) -->
+    <!-- Meta keywords (ainda que com pouco peso, agora mais estratégicas) -->
     <meta
       name="keywords"
-      content="Antoni Matheus, designer freelancer, criação de sites, portfólio de design, desenvolvimento web, React, design gráfico, designer em Primavera do Leste"
+      content="Antoni Matheus, designer gráfico, desenvolvedor web, criação de sites, portfólio criativo, identidade visual, design responsivo, React, UI/UX, Primavera do Leste"
     />
 
-    <!-- Meta author -->
+    <!-- Autor -->
     <meta name="author" content="Antoni Matheus" />
 
-    <!-- Meta charset e viewport para compatibilidade e responsividade -->
+    <!-- Charset e viewport -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -3643,9 +3645,7 @@
                     src="../portfolio/wp-content/uploads/2024/03/q4.png "
                     class="attachment-full size-full wp-image-57"
                     alt=""
-                    srcset="
-                      ../portfolio/wp-content/uploads/2024/03/q4.png 332w
-                    "
+                    srcset="../portfolio/wp-content/uploads/2024/03/q4.png 332w"
                     sizes="(max-width: 332px) 100vw, 332px"
                 /></noscript>
               </div>
@@ -4911,6 +4911,18 @@
           color: var(--color3, black);
           background-color: #fff4;
         }
+
+        @media (max-width: 768px) {
+          .iframe-wrapper {
+            width: 300px; /* Reduz largura para mostrar o próximo */
+            margin-right: 10px;
+            margin-left: 10px;
+          }
+
+          iframe {
+            height: 600px; /* Reduz a altura para melhor encaixe em celulares */
+          }
+        }
       </style>
 
       <div
@@ -4958,12 +4970,12 @@
             title="Fotografo-Portfolio"
           ></iframe>
           <div class="links">
-            <a
-              href="https://github.com/antonimatheus/Tennis"
-              target="_blank"
+            <a href="https://github.com/antonimatheus/Tennis" target="_blank"
               >Repositório</a
             >
-            <a href="https://elytennis.netlify.app/elysian-tennis/index.html" target="_blank"
+            <a
+              href="https://elytennis.netlify.app/elysian-tennis/index.html"
+              target="_blank"
               >Ver site</a
             >
           </div>
