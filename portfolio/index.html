@@ -10,30 +10,7 @@
       href="wp-content/uploads/2024/08/FOTO_PRO_favicon.png"
       type="image/x-icon"
     />
-    <script>
-      if (
-        navigator.userAgent.match(/MSIE|Internet Explorer/i) ||
-        navigator.userAgent.match(/Trident\/7\..*?rv:11/i)
-      ) {
-        var href = document.location.href;
-        if (!href.match(/[?&]nowprocket/)) {
-          if (href.indexOf("?") == -1) {
-            if (href.indexOf("#") == -1) {
-              document.location.href = href + "?nowprocket=1";
-            } else {
-              document.location.href = href.replace("#", "?nowprocket=1#");
-            }
-          } else {
-            if (href.indexOf("#") == -1) {
-              document.location.href = href + "&nowprocket=1";
-            } else {
-              document.location.href = href.replace("#", "&nowprocket=1#");
-            }
-          }
-        }
-      }
-    </script>
-    <script>
+    <script defer>
       (() => {
         class RocketLazyLoadScripts {
           constructor() {
@@ -2878,30 +2855,23 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const scrollToTopBtn = document.querySelector(
-          ".ha-scroll-to-top-button"
-        );
+    <script defer>
+      const scrollToTopBtn = document.querySelector(".ha-scroll-to-top-button");
 
-        // Esconder o botão por padrão
-        scrollToTopBtn.style.display = "none";
+      scrollToTopBtn.style.display = "none";
 
-        // Mostrar/esconder botão com base na rolagem
-        window.addEventListener("scroll", function () {
-          if (window.scrollY > 300) {
-            scrollToTopBtn.style.display = "flex";
-          } else {
-            scrollToTopBtn.style.display = "none";
-          }
-        });
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > 300) {
+          scrollToTopBtn.style.display = "flex";
+        } else {
+          scrollToTopBtn.style.display = "none";
+        }
+      });
 
-        // Rolagem suave ao topo
-        scrollToTopBtn.addEventListener("click", function () {
-          window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-          });
+      scrollToTopBtn.addEventListener("click", function () {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
         });
       });
     </script>
@@ -5038,7 +5008,7 @@
         </div>
       </div>
 
-      <script>
+      <script defer>
         document.addEventListener("DOMContentLoaded", function () {
           const scrollContainer = document.getElementById("iframe-container");
           const iframes = scrollContainer.querySelectorAll("iframe");
@@ -5291,7 +5261,7 @@
               data-element_type="container"
               data-settings='{"_ha_eqh_enable":false}'
             >
-              <div class="e-con-inner">
+              <div class="e-con-inner" style="overflow-y: hidden">
                 <div
                   class="elementor-element elementor-element-fb7ec8d elementor-widget__width-initial elementor-invisible elementor-widget elementor-widget-image"
                   data-id="fb7ec8d"
@@ -5734,7 +5704,7 @@
       data-rocket-defer
       defer
     ></script>
-    <script>
+    <script defer>
       window.lazyLoadOptions = [
         {
           elements_selector:
@@ -5831,12 +5801,7 @@
       src="wp-content/plugins/wp-rocket/assets/js/lazyload/17.8.3/lazyload.min.js"
     ></script>
 
-    <script
-      data-name="wpr-wpr-beacon"
-      src="wp-content/plugins/wp-rocket/assets/js/wpr-beacon.min.js"
-      async
-    ></script>
-    <script>
+    <script defer>
       class RocketElementorAnimation {
         constructor() {
           (this.deviceMode = document.createElement("span")),
