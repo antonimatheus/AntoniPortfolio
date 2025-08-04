@@ -50,7 +50,7 @@
 .elementor-24
   .elementor-element.elementor-element-a36d240
   .elementor-icon-wrapper {
- text-align: center;
+  text-align: center;
 }
 .elementor-24
   .elementor-element.elementor-element-a36d240.elementor-view-stacked
@@ -266,8 +266,6 @@
   padding: 15px 15px 15px 15px;
   border-style: none;
 }
-
-
 
 .elementor-24 .elementor-element.elementor-element-187ab80 {
   --display: flex;
@@ -1950,7 +1948,7 @@ body:not(.rtl)
     --padding-left: 0px;
     --padding-right: 0px;
   }
-  .elementor-24 .elementor-element.elementor-element-3ae7e75 span{
+  .elementor-24 .elementor-element.elementor-element-3ae7e75 span {
     font-size: 10px;
     color: white;
   }
@@ -1960,7 +1958,7 @@ body:not(.rtl)
   .elementor-24 .elementor-element.elementor-element-a36d240 .elementor-icon {
     font-size: 20px;
   }
-  
+
   .elementor-24 .elementor-element.elementor-element-a36d240.elementor-element {
     --align-self: center;
   }
@@ -2129,7 +2127,7 @@ body:not(.rtl)
     .elementor-element.elementor-element-9546f21
     > .elementor-motion-effects-container
     > .elementor-motion-effects-layer {
-    background-image:  url("../../../../../../../uploads/2024/03/Slice-4-scaled.jpg");
+    background-image: url("../../../../../../../uploads/2024/03/Slice-4-scaled.jpg");
   }
   .elementor-24 .elementor-element.elementor-element-268026a {
     --align-items: center;
