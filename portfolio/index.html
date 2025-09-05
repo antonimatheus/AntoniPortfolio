@@ -17,6 +17,55 @@
 
 <head>
   <meta charset="UTF-8" />
+
+  <!-- fade-in-up elementos -->>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const cards = document.querySelectorAll(".fade-in-up");
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
+
+      cards.forEach(card => observer.observe(card));
+    });
+  </script>
+
+
+  <!-- Rolagem Imagens Confiança -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <!-- Rolagem Imagens Confiança -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const swiper = new Swiper(".my-swiper-container", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        lazy: true,
+        autoplay: {
+          delay: 4500, // 5 segundos
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          480: { slidesPerView: 1.2 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        },
+      });
+    });
+  </script>
+
   <link rel="shortcut icon" href="wp-content/uploads/2024/08/FOTO_PRO_favicon.png" type="image/x-icon" />
   <script defer>
     (() => {
@@ -3433,7 +3482,7 @@
         <div class="elementor-element elementor-element-3e5e32b e-con-full e-flex e-con e-child" data-id="3e5e32b"
           data-element_type="container" data-settings='{"_ha_eqh_enable":false}'>
           <div
-            class="elementor-element elementor-element-a0c931f elementor-widget__width-initial elementor-invisible elementor-widget elementor-widget-image"
+            class="elementor-element elementor-element-a0c931f elementor-widget__width-initial fade-in-up elementor-widget elementor-widget-image"
             data-id="a0c931f" data-element_type="widget" data-settings='{"_animation":"fadeInLeft"}'
             data-widget_type="image.default">
             <div class="elementor-widget-container">
@@ -3451,7 +3500,7 @@
             </div>
           </div>
           <div
-            class="elementor-element elementor-element-6069997 elementor-widget-tablet__width-initial elementor-invisible elementor-widget elementor-widget-image"
+            class="elementor-element elementor-element-6069997 elementor-widget-tablet__width-initial fade-in-up elementor-widget elementor-widget-image"
             data-id="6069997" data-element_type="widget" data-settings='{"_animation":"fadeInRight"}'
             data-widget_type="image.default">
             <div class="elementor-widget-container">
@@ -3464,7 +3513,7 @@
             </div>
           </div>
           <div
-            class="elementor-element elementor-element-5fb05bc elementor-widget-tablet__width-initial elementor-invisible elementor-widget elementor-widget-image"
+            class="elementor-element elementor-element-5fb05bc elementor-widget-tablet__width-initial fade-in-up elementor-widget elementor-widget-image"
             data-id="5fb05bc" data-element_type="widget" data-settings='{"_animation":"fadeInUp"}'
             data-widget_type="image.default">
             <div class="elementor-widget-container">
@@ -3477,7 +3526,7 @@
             </div>
           </div>
           <div
-            class="elementor-element elementor-element-da85ba7 elementor-widget-tablet__width-initial elementor-invisible elementor-widget elementor-widget-image"
+            class="elementor-element elementor-element-da85ba7 elementor-widget-tablet__width-initial fade-in-up elementor-widget elementor-widget-image"
             data-id="da85ba7" data-element_type="widget" data-settings='{"_animation":"fadeInDown"}'
             data-widget_type="image.default">
             <div class="elementor-widget-container">
@@ -3540,7 +3589,7 @@
         </div>
         <div class="elementor-element elementor-element-cb31bb1 e-con-full e-flex e-con e-child" data-id="cb31bb1"
           data-element_type="container" data-settings='{"_ha_eqh_enable":false}'>
-          <div class="elementor-element elementor-element-7e0bd78 e-flex e-con-boxed elementor-invisible e-con e-child"
+          <div class="elementor-element elementor-element-7e0bd78 e-flex e-con-boxed fade-in-up e-con e-child"
             data-id="7e0bd78" data-element_type="container"
             data-settings='{"sticky":"top","sticky_parent":"yes","animation":"fadeInUp","_ha_eqh_enable":false,"sticky_on":["desktop","tablet","mobile"],"sticky_offset":0,"sticky_effects_offset":0}'>
             <div data-rocket-location-hash="c2f261e139443c84ca60cc6cb3d5634c" class="e-con-inner">
@@ -3592,7 +3641,7 @@
               </div>
             </div>
           </div>
-          <div class="elementor-element elementor-element-106425c e-flex e-con-boxed elementor-invisible e-con e-child"
+          <div class="elementor-element elementor-element-106425c e-flex e-con-boxed fade-in-up e-con e-child"
             data-id="106425c" data-element_type="container"
             data-settings='{"sticky":"top","sticky_parent":"yes","animation":"fadeInUp","_ha_eqh_enable":false,"sticky_on":["desktop","tablet","mobile"],"sticky_offset":0,"sticky_effects_offset":0}'>
             <div data-rocket-location-hash="9df018fcc06d2a8d86518aee4205e42f" class="e-con-inner">
@@ -3643,7 +3692,7 @@
               </div>
             </div>
           </div>
-          <div class="elementor-element elementor-element-401b635 e-flex e-con-boxed elementor-invisible e-con e-child"
+          <div class="elementor-element elementor-element-401b635 e-flex e-con-boxed fade-in-up e-con e-child"
             data-id="401b635" data-element_type="container"
             data-settings='{"sticky":"top","sticky_parent":"yes","animation":"fadeInUp","_ha_eqh_enable":false,"sticky_on":["desktop","tablet","mobile"],"sticky_offset":0,"sticky_effects_offset":0}'>
             <div data-rocket-location-hash="f7e9ce9538b59e7af6cdbc7238fc7f66" class="e-con-inner">
@@ -3698,7 +3747,7 @@
               </div>
             </div>
           </div>
-          <div class="elementor-element elementor-element-5b2ce64 e-flex e-con-boxed elementor-invisible e-con e-child"
+          <div class="elementor-element elementor-element-5b2ce64 e-flex e-con-boxed fade-in-up e-con e-child"
             data-id="5b2ce64" data-element_type="container"
             data-settings='{"sticky":"top","sticky_parent":"yes","animation":"fadeInUp","_ha_eqh_enable":false,"sticky_on":["desktop","tablet","mobile"],"sticky_offset":0,"sticky_effects_offset":0}'>
             <div class="e-con-inner">
@@ -3758,7 +3807,7 @@
       <div class="e-con-inner">
         <div class="elementor-element elementor-element-d10db5c e-con-full e-flex e-con e-child" data-id="d10db5c"
           data-element_type="container" data-settings='{"_ha_eqh_enable":false}'>
-          <div class="elementor-element elementor-element-6c0db0b e-con-full e-flex elementor-invisible e-con e-child"
+          <div class="elementor-element elementor-element-6c0db0b e-con-full e-flex fade-in-up e-con e-child"
             data-id="6c0db0b" data-element_type="container"
             data-settings='{"position":"absolute","animation":"fadeInUp","_ha_eqh_enable":false}'>
             <div
@@ -3866,7 +3915,7 @@
             </div>
           </div>
           <div
-            class="elementor-element elementor-element-433737a elementor-absolute elementor-invisible elementor-widget elementor-widget-image"
+            class="elementor-element elementor-element-433737a elementor-absolute fade-in-up elementor-widget elementor-widget-image"
             data-id="433737a" data-element_type="widget"
             data-settings='{"_position":"absolute","_animation":"fadeInRight"}' data-widget_type="image.default">
             <div class="elementor-widget-container">
@@ -3884,7 +3933,7 @@
             </div>
           </div>
           <div
-            class="elementor-element elementor-element-7ffc9f1 elementor-absolute elementor-invisible elementor-widget elementor-widget-image"
+            class="elementor-element elementor-element-7ffc9f1 elementor-absolute fade-in-up elementor-widget elementor-widget-image"
             data-id="7ffc9f1" data-element_type="widget"
             data-settings='{"_position":"absolute","_animation":"fadeInRight"}' data-widget_type="image.default">
             <div class="elementor-widget-container">
@@ -3897,7 +3946,7 @@
             </div>
           </div>
           <div
-            class="elementor-element elementor-element-91d9bc2 elementor-absolute elementor-invisible elementor-widget elementor-widget-image"
+            class="elementor-element elementor-element-91d9bc2 elementor-absolute fade-in-up elementor-widget elementor-widget-image"
             data-id="91d9bc2" data-element_type="widget"
             data-settings='{"_position":"absolute","_animation":"fadeInRight"}' data-widget_type="image.default">
             <div class="elementor-widget-container">
@@ -3915,7 +3964,7 @@
             </div>
           </div>
           <div
-            class="elementor-element elementor-element-161e231 elementor-absolute elementor-invisible elementor-widget elementor-widget-image"
+            class="elementor-element elementor-element-161e231 elementor-absolute fade-in-up elementor-widget elementor-widget-image"
             data-id="161e231" data-element_type="widget"
             data-settings='{"_position":"absolute","_animation":"fadeInRight"}' data-widget_type="image.default">
             <div class="elementor-widget-container">
@@ -3933,7 +3982,7 @@
             </div>
           </div>
           <div
-            class="elementor-element elementor-element-d749b28 elementor-absolute elementor-invisible elementor-widget elementor-widget-image"
+            class="elementor-element elementor-element-d749b28 elementor-absolute fade-in-up elementor-widget elementor-widget-image"
             data-id="d749b28" data-element_type="widget"
             data-settings='{"_position":"absolute","_animation":"fadeInRight"}' data-widget_type="image.default">
             <div class="elementor-widget-container">
@@ -3946,7 +3995,7 @@
             </div>
           </div>
           <div
-            class="elementor-element elementor-element-22f3d49 elementor-absolute elementor-invisible elementor-widget elementor-widget-image"
+            class="elementor-element elementor-element-22f3d49 elementor-absolute fade-in-up elementor-widget elementor-widget-image"
             data-id="22f3d49" data-element_type="widget"
             data-settings='{"_position":"absolute","_animation":"fadeInRight"}' data-widget_type="image.default">
             <div class="elementor-widget-container">
@@ -3959,7 +4008,7 @@
             </div>
           </div>
           <div
-            class="elementor-element elementor-element-11e7fe4 elementor-absolute elementor-invisible elementor-widget elementor-widget-image"
+            class="elementor-element elementor-element-11e7fe4 elementor-absolute fade-in-up elementor-widget elementor-widget-image"
             data-id="11e7fe4" data-element_type="widget"
             data-settings='{"_position":"absolute","_animation":"fadeInRight"}' data-widget_type="image.default">
             <div class="elementor-widget-container">
@@ -4315,44 +4364,24 @@
             Algumas marcas que confiaram no meu trabalho
           </div>
         </div>
-        <div class="elementor-element elementor-element-6345b12 elementor-widget elementor-widget-image-carousel"
-          data-id="6345b12" data-element_type="widget"
-          data-settings='{"navigation":"none","autoplay":"yes","pause_on_hover":"yes","pause_on_interaction":"yes","autoplay_speed":5000,"infinite":"yes","speed":500}'
-          data-widget_type="image-carousel.default">
-          <div class="elementor-widget-container">
-            <div class="elementor-image-carousel-wrapper swiper" dir="ltr">
-              <div class="elementor-image-carousel swiper-wrapper" aria-live="off">
-                <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="1 de 3">
-                  <figure class="swiper-slide-inner">
-                    <img decoding="async" class="swiper-slide-image"
-                      src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
-                      alt="AmandaBiuger" data-lazy-src="wp-content/uploads/2024/03/AmandaBiuger.webp"
-                      style="border-radius: 10px" /><noscript><img decoding="async" class="swiper-slide-image"
-                        src="wp-content/uploads/2024/03/AmandaBiuger.webp" alt="AmandaBiuger" /></noscript>
-                  </figure>
-                </div>
-                <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="2 de 3">
-                  <figure class="swiper-slide-inner">
-                    <img decoding="async" class="swiper-slide-image"
-                      src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
-                      alt="AnaRoncatto" data-lazy-src="wp-content/uploads/2024/03/AnaRoncatto.webp"
-                      style="border-radius: 10px" /><noscript><img decoding="async" class="swiper-slide-image"
-                        src="wp-content/uploads/2024/03/AnaRoncatto.webp" alt="AnaRoncatto" /></noscript>
-                  </figure>
-                </div>
-                <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="3 de 3">
-                  <figure class="swiper-slide-inner">
-                    <img decoding="async" class="swiper-slide-image"
-                      src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
-                      alt="ESF" data-lazy-src="wp-content/uploads/2024/03/ESF.webp"
-                      style="border-radius: 10px" /><noscript><img decoding="async" class="swiper-slide-image"
-                        src="wp-content/uploads/2024/03/ESF.webp" alt="ESF" /></noscript>
-                  </figure>
-                </div>
-              </div>
+        <div class="my-swiper-container swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="wp-content/uploads/2024/03/AmandaBiuger.webp" alt="AmandaBiuger">
             </div>
+            <div class="swiper-slide">
+              <img src="wp-content/uploads/2024/03/AnaRoncatto.webp" alt="AnaRoncatto">
+            </div>
+            <div class="swiper-slide">
+              <img src="wp-content/uploads/2024/03/ESF.webp" alt="ESF">
+            </div>
+            <!-- Adicione mais slides aqui -->
           </div>
+
+          <!-- Paginação -->
+          <div class="swiper-pagination"></div>
         </div>
+
       </div>
     </div>
     <div class="elementor-element elementor-element-dd6f994 e-flex e-con-boxed e-con e-parent" data-id="dd6f994"
@@ -4364,11 +4393,11 @@
             data-element_type="container" data-settings='{"_ha_eqh_enable":false}'>
             <div class="e-con-inner">
               <div
-                class="elementor-element elementor-element-6ddfa15 elementor-view-default elementor-invisible elementor-widget elementor-widget-icon"
+                class="elementor-element elementor-element-6ddfa15 elementor-view-default fade-in-up elementor-widget elementor-widget-icon"
                 data-id="6ddfa15" data-element_type="widget" data-settings='{"_animation":"fadeInLeft"}'
                 data-widget_type="icon.default"></div>
               <div
-                class="elementor-element elementor-element-e9ebce0 elementor-invisible elementor-widget elementor-widget-text-editor"
+                class="elementor-element elementor-element-e9ebce0 fade-in-up elementor-widget elementor-widget-text-editor"
                 data-id="e9ebce0" data-element_type="widget" data-settings='{"_animation":"fadeInLeft"}'
                 data-widget_type="text-editor.default">
                 <div class="elementor-widget-container">
@@ -4376,7 +4405,7 @@
                 </div>
               </div>
               <div
-                class="elementor-element elementor-element-2146a68 elementor-invisible elementor-widget elementor-widget-heading"
+                class="elementor-element elementor-element-2146a68 fade-in-up elementor-widget elementor-widget-heading"
                 data-id="2146a68" data-element_type="widget" data-settings='{"_animation":"fadeInLeft"}'
                 data-widget_type="heading.default">
                 <div class="elementor-widget-container">
@@ -4412,7 +4441,7 @@
             data-element_type="container" data-settings='{"_ha_eqh_enable":false}'>
             <div class="e-con-inner" style="overflow-y: hidden">
               <div
-                class="elementor-element elementor-element-fb7ec8d elementor-widget__width-initial elementor-invisible elementor-widget elementor-widget-image"
+                class="elementor-element elementor-element-fb7ec8d elementor-widget__width-initial fade-in-up elementor-widget elementor-widget-image"
                 data-id="fb7ec8d" data-element_type="widget" data-settings='{"_animation":"fadeInUp"}'
                 data-widget_type="image.default">
                 <div class="elementor-widget-container">
@@ -4873,7 +4902,7 @@
         );
         (this.animationSettingKeys = this._listAnimationSettingsKeys(t)),
           document
-            .querySelectorAll(".elementor-invisible[data-settings]")
+            .querySelectorAll("elementor-invisible[data-settings]")
             .forEach((t) => {
               const e = t.getBoundingClientRect();
               if (e.bottom >= 0 && e.top <= window.innerHeight)
